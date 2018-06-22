@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-	return HttpResponse("<h1> Hellllooooo  </h1>")
+	return render(request, "guestbook/index.html")
 
-
-
+def sign(request):
+	return render(request, "guestbook/sign.html")
 # Create your views here.
