@@ -1,11 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .forms import MyForm
+from .forms import Email, Web
 
 
 def index(request):
-	xyz = MyForm()
-	return render(request, 'home/index.html', {"xyz": xyz})
+	xyz = Email()
+	abc = Web()
+	return render(request, 'home/index.html', {'xyz': xyz, 'abc': abc} )
 
 
 # Create your views here.
