@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Guest Book</title>
+    <title>Home</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"> 
@@ -23,19 +23,18 @@
   </head>
 
 
-<form>
-
-  <div class="form-group">
+<form action="/action_page.php">
+  <fieldset>
     {% csrf_token %}
+    <legend>Login</legend>
+    <br>
     {{ xyz }}
-  </div>
-  <div class="form-group">
+    <br>
+    <br>
     {{ abc }}
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox"> Remember me</label>
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
+    <br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
 </form>
 
 

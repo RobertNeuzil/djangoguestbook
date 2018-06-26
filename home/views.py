@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .forms import Email, Web
+from .forms import First, Last
 
 
 def index(request):
-	xyz = Email()
-	abc = Web()
+	xyz = First()
+	abc = Last()
 	return render(request, 'home/index.html', {'xyz': xyz, 'abc': abc} )
 
 

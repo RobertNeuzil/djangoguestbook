@@ -1,6 +1,8 @@
 from django import forms
 
-class Email(forms.Form):
-	EnterEmail = forms.EmailField(max_length=100)
-class Web(forms.Form):
-	EnterWeb = forms.URLField(max_length= 100)
+class First(forms.Form):
+	First = forms.CharField(max_length=100, 
+		widget= forms.TextInput(attrs={ "name": "firstname"} ))
+class Last(forms.Form):
+	Last = forms.CharField(max_length= 100,
+		widget= forms.TextInput(attrs={"name": "lastname"} ))
