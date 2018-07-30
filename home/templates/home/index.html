@@ -1,40 +1,64 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+<html>
+<title>GuestBook</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
 
-    <title>Home</title>
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
 
-    <!-- Bootstrap core CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"> 
-    <!-- Bootstrap theme -->
-    <link href="{% static 'guestbook/bootstrap-theme.min.css' %}" rel="stylesheet">
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>GuestBook Homepage</b></h1>
+  <p>Welcome to the Django Guest Book of <span class="w3-tag">Robert Neuzil</span></p>
+</header>
 
-    <!-- Custom styles for this template -->
-    <link href="{% static 'guestbook/theme.css' %}" rel="stylesheet">
+<!-- Grid -->
+<div class="w3-row">
 
-  </head>
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+
+    <div class="w3-container">
+      <h3><b>Blog Entry</b></h3>
+      <h5> Most Recent Blog Entry <span class="w3-opacity">April 7, 2014</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>{% guestbook\models\comment  %}</p>
+
+    </div>
+  </div>
+  <hr>
 
 
-<form action="/action_page.php">
-  <fieldset>
-    {% csrf_token %}
-    <legend>Login</legend>
-    <br>
-    {{ xyz }}
-    <br>
-    <br>
-    {{ abc }}
-    <br><br>
-    <input type="submit" value="Submit">
-  </fieldset>
-</form>
+
+</div>
+
+<!-- Introduction menu -->
 
 
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+
+
+</body>
+</html>
